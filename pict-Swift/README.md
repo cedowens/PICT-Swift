@@ -1,6 +1,6 @@
-# PICT-Swift
+# PICT-Swift (Post Infection Collection Toolkit)
 
-This is a Swift (and slightly modified) version of Thomas Reed's PICT (Post Infection Collection Toolkit: https://github.com/thomasareed/pict). Thomas Reed is the brains behind the PICT concept. I just simply wrote a Swift version of it and added an additional collector.
+This is a Swift (and slightly modified) version of Thomas Reed's PICT (Post Infection Collection Toolkit: https://github.com/thomasareed/pict). Thomas Reed is the brains behind the awesome PICT concept. I just simply wrote a Swift version of it and added an additional collector.
 
 I wanted to port PICT over to Swift to have another option in case there is a need to run PICT on a macOS host that does not have python (which could be the case down the road once Apple removes scripting runtime engines from macOS).
 
