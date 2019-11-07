@@ -309,7 +309,7 @@ basicsFileHandle.write("[+] User data:\r----------------------------\r".data(usi
 
 for user in namesList {
     
-    if user.prefix(1) != "_" && user != "daemon" && user != "nobody"{
+    if user.prefix(1) != "_" && user != "daemon" && user != "nobody" && !(user.isEmpty){
         let task7 = Process()
         task7.launchPath = "/usr/bin/dscacheutil"
         let args7 : [String] = ["-q", "user", "-a", "name", "\(user)"]
@@ -362,7 +362,7 @@ basicsFileHandle.write("\r".data(using: .utf8)!)
 
 //-----lscollector
 if keepLSDataSettings == "true"{
-    var lsRegFilename = "lsregister.txt"
+    var lsRegFilename = "lsregister-dump.txt"
     fileMan.createFile(atPath: "\(collectionFolderName)/\(lsRegFilename)", contents: nil, attributes: nil)
     let t = Process()
     t.launchPath = "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"
@@ -436,7 +436,7 @@ if bashHistCollectorInfo == "true" {
     let bashHistFileHandle = try FileHandle(forWritingTo: bashHistURL)
     
     for user in namesList{
-        if user.prefix(1) != "_" && user != "daemon" && user != "nobody"{
+        if user.prefix(1) != "_" && user != "daemon" && user != "nobody" && !(user.isEmpty){
             bashHistFileHandle.write("Username: \(user)\r----------------------------\r".data(using: .utf8)!)
             
             if (fileMan.fileExists(atPath: "/Users/\(user)/.bash_history")){
@@ -812,7 +812,7 @@ if certsCollectorInfo == "true"{
     for user in namesList {
 
         do {
-            if user.prefix(1) != "_" && user != "daemon" && user != "nobody"{
+            if user.prefix(1) != "_" && user != "daemon" && user != "nobody" && !(user.isEmpty){
                 
                 let dispatcher = DispatchQueue.global(qos: .background)
                 dispatcher.async {
@@ -1956,7 +1956,7 @@ if suspiciousCollectorInfo == "true"{
                         
                 }
                 
-            }//for eachuser in namesList
+            }
         
         if suspectLAgent.count > 0 {
             suspURLHandle.write("\rSuspicious launch agents:\r-------------------------------------\r".data(using: .utf8)!)
@@ -2195,8 +2195,6 @@ if zipItSettings == "true"{
 
 
           
-
-
 
 
 
