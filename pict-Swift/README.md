@@ -6,6 +6,7 @@ I wanted to port PICT over to Swift to have another option in case there is a ne
 
 
 **Info**
+
 As noted in Thomas Reed's PICT README, PICT should be run on a live host that you suspect is infected with malware. PICT will then attempt to gather useful artifacts:
 - persistence information
 - search for suspicious indicators
