@@ -42,7 +42,7 @@ Ensure all browsers are closed and not running so that history data can be acces
 
 _**Third:**_
 
-run the pict-Swift mach-o binary with sudo privileges so that the binary has permissions to collect the necessary artifacts
+run the pict-Swift mach-o binary with sudo privileges so that the binary has permissions to collect the necessary artifacts. Depending on how you move the mach-o binary to the target system you may either have to sign and notarize it or just simply remove the quarantine flag from it (_$ xattr -d [pict-Swift-compiled]_) to allow it to run without Gatekeeper blocking it.
 
 **How pict-Swift works**:
 
