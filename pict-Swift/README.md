@@ -12,9 +12,11 @@ As noted in Thomas Reed's PICT README, PICT should be run on a live host that yo
 - search for suspicious indicators
 - browser extensions
 - browser history
+- quarantine history
 - bash config info
 - bash history info
 - running process info
+- network connections
 - network config info
 - profile info
 - cert info
