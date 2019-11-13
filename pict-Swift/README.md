@@ -30,7 +30,7 @@ PICT-Swift builds a mach-o binary that you can run on suspected infected macOS h
 
 ![Image](pic2.jpg) 
 
-To do so, simply download the repo, open the xcodeproj file, edit the main.swift source code, and build to drop a new compiled binary. Once you have your binary (or if you use the included compiled binary in this repo), you will need to take the following steps on the suspected infected macOS host for the mach-o binary to have permissions to run:
+To do so, simply download the repo, open the xcodeproj file, edit the main.swift source code (if you desire), and build to drop a new compiled binary. Once you have your binary (or if you use the included compiled binary in this repo), you will need to take the following steps on the suspected infected macOS host for the mach-o binary to have permissions to run:
 
 _**First give the mach-o binary full hard disk access which will be needed for some artifacts:**_
 1. Open System Preferences -> Security & Privacy
